@@ -386,7 +386,7 @@ const HTML_CONTENT = `
     }
     /* 版权信息样式 */
 #copyright {
-    position: relative; /* 或者使用 static，这样会根据文档流自然排列 */
+    position: fixed; /* 确保版权信息固定在页面底部 */
     bottom: 0;
     left: 50%; /* 设置左边距为50%以便于居中 */
     transform: translateX(-50%); /* 向左偏移50%以实现居中 */
@@ -502,7 +502,7 @@ const HTML_CONTENT = `
         <!-- 版权信息 -->
         <div id="copyright" class="copyright">
             <!--请不要删除-->
-            <p>项目地址：<a href="https://github.com/hmhm2022/Card-Tab" target="_blank">GitHub</a> 如果喜欢，烦请点个star！</p>
+            <p>项目地址：<a href="https://github.com/hmhm2022/Card-Tab" target="_blank">GitHub</a> &nbsp样式修改<a href="https://github.com/mjj37510/Card-Tab" target="_blank"> 仓库</a></p>
         </div>
     </div>
 
