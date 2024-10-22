@@ -781,17 +781,24 @@ const HTML_CONTENT = `
         const cardTop = document.createElement('div');
         cardTop.className = 'card-top';
     
+        // 如果不是私密书签，才添加 icon 图片
+        if (!link.isPrivate) {
         const icon = document.createElement('img');
         icon.className = 'card-icon';
-        icon.src = 'https://favicon.zhusl.com/ico?url=' + link.url;
+        icon.src = 'https://api.xinac.net/icon/?url=' + link.url;
         icon.alt = 'Website Icon';
-    
+        cardTop.appendChild(icon);
+        }
+
         const title = document.createElement('div');
         title.className = 'card-title';
         title.textContent = link.name;
-    
-        cardTop.appendChild(icon);
+
         cardTop.appendChild(title);
+    
+    
+
+  
     
         const url = document.createElement('div');
         url.className = 'card-url';
